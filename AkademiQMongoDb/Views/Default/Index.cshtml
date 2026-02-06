@@ -6,298 +6,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Foodera - Responsive Food Landing Page Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="/template/images/favicon.html">
-
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="/template/css/bootstrap.min.css">
-
-    <!-- ICONS -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/template/css/ilmosys-icon.css">
-    <link rel="stylesheet" href="/template/js/vendors/swipebox/css/swipebox.min.css">
-
-
-    <!-- THEME / PLUGIN CSS -->
-    <link rel="stylesheet" href="/template/js/vendors/slick/slick.css">
-    <link rel="stylesheet" href="/template/css/style.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
+@await Component.InvokeAsync("_DefaultHeadComponentPartial")
 
 <body id="home">
     <div class="body">
         <!-- HEADER -->
-        <header>
-            <nav class="navbar-inverse navbar-lg navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a href="#" class="navbar-brand brand"><img src="/template/images/logo.png" alt="logo"></a>
-                    </div>
-
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right navbar-login">
-                            <li>
-                                <a href="tel:1800789123"><span class="icon-call"></span> 1800 789 123</a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown mm-menu">
-                                <a class="page-scroll" href="#home">Home</a>
-                            </li>
-
-                            <li class="dropdown mm-menu">
-                                <a class="page-scroll" href="#about">About Us</a>
-                            </li>
-
-                            <li class="dropdown mm-menu">
-                                <a class="page-scroll" href="#explore">Explore Foods</a>
-                            </li>
-
-                            <li class="dropdown mm-menu">
-                                <a class="page-scroll" href="#reviews">Reviews</a>
-                            </li>
-
-                            <li class="dropdown mm-menu">
-                                <a class="page-scroll" href="#faq">FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
 
 
         <!-- Home -->
-        <div class="intro intro3">
-            <div class="container">
-                <div class="row center-content">
-                    <div class="col-md-5 col-sm-6">
-                        <h3>Good food choices are good investments.</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum amet leo. </p>
-                        <div class="space30"></div>
-                        <div class="dual-btn">
-                            <a href="#explore" class="btn btn-lg btn-primary page-scroll">Order Now <span class="fa fa-shopping-basket"></span></a> &nbsp; &nbsp;
-                            <a href="#about" class="btn btn-lg btn-default btn-border page-scroll">Learn More <i class=" ilmosys-arrow-right"></i></a>
-                        </div>
-
-                    </div>
-                    <div class="col-md-7 col-sm-6 no-padding">
-                    </div>
-                </div>
-            </div>
-        </div>
+            @await Component.InvokeAsync("_DefaultFeatureComponentPartial")
 
         <!-- Stats -->
         <div id="stats2" class="bg-primary">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-3">
-                        <div class="stats2-info">
-                            <i class="icon-piggy"></i>
-                            <p><span class="count">1287</span>+</p>
-                            <h2>Savings</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="stats2-info">
-                            <i class="icon-photo"></i>
-                            <p><span class="count">5786</span>+</p>
-                            <h2>Photos</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="stats2-info">
-                            <i class="icon-rocket"></i>
-                            <p><span class="count">1440</span>+</p>
-                            <h2>Rockets</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="stats2-info">
-                            <i class="icon-world"></i>
-                            <p><span class="count">7110</span>+</p>
-                            <h2>Globes</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @await Component.InvokeAsync("_DefaultStatisticComponentPartial")
         </div>
 
 
         <!-- About Us -->
         <div id="about" class="container">
             <!-- About Section 1 -->
-            <div class="intro intro-about2">
-                <div class="container">
-                    <div class="row center-content">
-                        <div class="col-md-7 ">
-                            <img src="images/features/1.png" class="pull-left img-responsive" alt="" />
-                        </div>
-                        <div class="col-md-5">
-                            <h3>We pride ourselves on making real food from the best ingredients.</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
-                            <a href="#" class="btn btn-lg btn-primary">Learn More <i class="icon-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @await Component.InvokeAsync("_DefaultAboutSection1ComponentPartial")
 
             <!-- About Section 2 -->
-            <div class="intro intro-about2">
-                <div class="container">
-                    <div class="row center-content">
-                        <div class="col-md-5">
-                            <h3>We make everything by hand with the best possible ingredients.</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                            <ul class="list">
-                                <li><i class="fa fa-check"></i> Etiam sed dolor ac diam volutpat.</li>
-                                <li><i class="fa fa-check"></i> Erat volutpat aliquet imperdiet.</li>
-                                <li><i class="fa fa-check"></i> purus a odio finibus bibendum.</li>
-                            </ul>
-
-                            <div class="space30"></div>
-                            <a href="#" class="btn btn-lg btn-primary">Learn More <i class="icon-arrow-right"></i></a>
-                        </div>
-                        <div class="col-md-7">
-                            <img src="images/features/2.png" class="pull-left img-responsive" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @await Component.InvokeAsync("_DefaultAboutSection2ComponentPartial")
         </div>
         <div class="space80"></div>
 
 
-        <div class="video-action">
-            <div class="row text-center">
-                <h1>When a man's stomach is full it makes no <br> difference whether he is rich or poor.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio <br>finibus bibendum in sit amet leo. Mauris feugiat erat tellus.</p>
-                <br><br>
-                <a href="https://www.youtube.com/watch?v=bZx8rPd-PKQ" class="swipebox-video">
-                    <div class="intro-video-pop">
-                        <i class="fa fa-play"></i> Watch Our Story
-                    </div>
-                </a>
-            </div>
-        </div>
+        @await Component.InvokeAsync("_DefaultStoryVideoComponentPartial")
 
 
 
-        <div id="explore" class="elements-content">
-            <div class="container">
-                <div class="about-inline text-center">
-                    <h3>Explore Our Foods </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card card-product">
-                            <div class="img-wrap"><img src="images/foods/01.jpg" alt="img"></div>
-                            <div class="info-wrap">
-                                <h4 class="title">Rainbow Vegetable Sandwich</h4>
-                                <p class="desc"> Time: 15 - 20 Minutes | Serves: 1 </p>
-                                <div class="price-wrap h3">
-                                    <span class="price-new">$10.50</span> <del class="price-old">$11.70</del>
-                                </div>
-                            </div>
-                            <div class="bottom-wrap">
-                                <a href="" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-product">
-                            <div class="img-wrap"><img src="images/foods/02.jpg" alt="img"></div>
-                            <div class="info-wrap">
-                                <h4 class="title">Vegetarian Burger</h4>
-                                <p class="desc"> Time: 30 - 45 Minutes | Serves: 1 </p>
-                                <div class="price-wrap h3">
-                                    <span class="price-new">$9.20</span> <del class="price-old">$10.50</del>
-                                </div>
-                            </div>
-                            <div class="bottom-wrap">
-                                <a href="" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-product">
-                            <div class="img-wrap"><img src="images/foods/03.jpg" alt="img"></div>
-                            <div class="info-wrap">
-                                <h4 class="title">Raspberry Stuffed French Toast</h4>
-                                <p class="desc"> Time: 10 - 15 Minutes | Serves: 1 </p>
-                                <div class="price-wrap h3">
-                                    <span class="price-new">$12.50</span> <del class="price-old">$13.20</del>
-                                </div>
-                            </div>
-                            <div class="bottom-wrap">
-                                <a href="" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @await Component.InvokeAsync("_DefaultProductComponentPartial")
         <div class="space100"></div>
 
         <!-- Testimonials -->
-        <div id="reviews" class="testimonials-color">
-            <div class="container">
-                <div class="about-inline text-center">
-                    <h3>Testimonials </h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="quote2">
-                            <div>
-                                <img src="images/testimonials/1.jpg" alt="" />
-                                <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live."</p>
-                                <span class="author">Simab Dave - Web Designer</span>
-                            </div>
-                            <div>
-                                <img src="images/testimonials/2.jpg" alt="" />
-                                <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live far from the countries Vokalia."</p>
-                                <span class="author">Johnthan Doe - UX Designer</span>
-                            </div>
-                            <div>
-                                <img src="images/testimonials/1.jpg" alt="" />
-                                <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. "</p>
-                                <span class="author">Maccy Doe - Front End</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="space100"></div>
-            </div>
-        </div>
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
 
         <!-- Faq -->
         <div class="container" id="faq">

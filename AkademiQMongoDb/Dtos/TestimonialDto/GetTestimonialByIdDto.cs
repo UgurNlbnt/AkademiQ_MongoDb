@@ -1,17 +1,11 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace AkademiQMongoDb.Entities
+﻿namespace AkademiQMongoDb.Dtos.TestimonialDto
 {
-    public class Testimonial
+    public class GetTestimonialByIdDto
     {
-        [BsonId] // idyi benzersiz yapan özellik
-        [BsonRepresentation(BsonType.ObjectId)] 
         public string TestimonialId { get; set; }
         public string NameSurname { get; set; }
         public string Position { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        
     }
 }

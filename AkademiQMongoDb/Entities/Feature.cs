@@ -1,7 +1,12 @@
-﻿namespace AkademiQMongoDb.Entities
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace AkademiQMongoDb.Entities
 {
     public class Feature
     {
+        [BsonId] // idyi benzersiz yapan özellik
+        [BsonRepresentation(BsonType.ObjectId)] 
         public string FeatureId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
