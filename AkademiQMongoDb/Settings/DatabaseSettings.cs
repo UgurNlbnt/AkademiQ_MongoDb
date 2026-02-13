@@ -1,0 +1,15 @@
+﻿namespace AkademiQMongoDb.Settings
+{
+    public class DatabaseSettings : IDatabaseSettings
+    {
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
+        public string AboutListCollectionName { get; set; }
+        public string AboutSection1CollectionName { get; set; }
+        public string AboutSection2CollectionName { get; set; }
+        public string FeatureCollectionName { get; set; }
+        public string ProductCollectionName { get; set; }
+        public string StoryVideoCollectionName { get; set; }
+        public string TestimonialCollectionName { get; set; }
+    }
+}
